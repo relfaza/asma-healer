@@ -119,6 +119,7 @@ export function DaruratScreen({ go }: { go: (s: Screen) => void }) {
       <div style={{ padding: "22px 16px 0", display: "flex", flexDirection: "column", gap: 12 }}>
         <button
           type="button"
+          onClick={() => window.open("tel:119")}
           style={{
             display: "flex",
             alignItems: "center",
@@ -141,6 +142,7 @@ export function DaruratScreen({ go }: { go: (s: Screen) => void }) {
 
         <button
           type="button"
+          onClick={() => go("chat")}
           style={{
             display: "flex",
             alignItems: "center",

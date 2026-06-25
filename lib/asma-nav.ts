@@ -16,6 +16,7 @@ export type Screen =
   | "dokter"
   | "settings"
   | "chat"
+  | "kalkulasi"
 
 export const SCREEN_LABELS: Record<Screen, string> = {
   splash: "Splash",
@@ -35,6 +36,7 @@ export const SCREEN_LABELS: Record<Screen, string> = {
   dokter: "Cari Dokter",
   settings: "Pengaturan",
   chat: "Chat Dokter",
+  kalkulasi: "Proses Kalkulasi",
 }
 
 export const SCREEN_CATEGORIES: { label: string; screens: Screen[] }[] = [
