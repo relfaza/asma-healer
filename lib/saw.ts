@@ -12,7 +12,7 @@ export const CRITERIA: Criterion[] = [
   {
     id: "C1",
     question: "Seberapa sering Anda mengalami sesak napas?",
-    weight: 0.25,
+    weight: 0.30,
     max: 4,
     options: [
       { label: "Tidak pernah", value: 1 },
@@ -24,8 +24,8 @@ export const CRITERIA: Criterion[] = [
   {
     id: "C2",
     question: "Sudah berapa lama gejala berlangsung?",
-    weight: 0.15,
-    max: 3,
+    weight: 0.20,
+    max: 4,
     options: [
       { label: "Kurang dari 1 minggu", value: 1 },
       { label: "1 - 4 minggu", value: 2 },
@@ -35,7 +35,7 @@ export const CRITERIA: Criterion[] = [
   {
     id: "C3",
     question: "Apakah ada bunyi mengi (wheezing) saat bernapas?",
-    weight: 0.25,
+    weight: 0.20,
     max: 3,
     options: [
       { label: "Tidak pernah", value: 1 },
@@ -46,7 +46,7 @@ export const CRITERIA: Criterion[] = [
   {
     id: "C4",
     question: "Apakah ada riwayat asma atau alergi di keluarga?",
-    weight: 0.1,
+    weight: 0.15,
     max: 3,
     options: [
       { label: "Tidak ada", value: 1 },
@@ -57,7 +57,7 @@ export const CRITERIA: Criterion[] = [
   {
     id: "C5",
     question: "Apakah gejala membaik setelah istirahat/obat?",
-    weight: 0.25,
+    weight: 0.15,
     max: 3,
     options: [
       // cost-style: not improving = higher risk

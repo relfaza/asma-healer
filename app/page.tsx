@@ -17,6 +17,7 @@ import { UdaraScreen } from "@/components/asma/udara"
 import { DokterScreen } from "@/components/asma/dokter"
 import { SettingsScreen } from "@/components/asma/settings"
 import { ChatScreen } from "@/components/asma/chat"
+import { KalkulasiScreen } from "@/components/asma/kalkulasi"
 
 const SEED: HistoryItem[] = [
   {
@@ -78,7 +79,8 @@ export default function Page() {
   const handleComplete = (answers: Record<string, number>) => {
     setLastAnswers(answers)
     setResult(computeSaw(answers))
-    go("hasil")
+    go("kalkulasi")
+    setTimeout(() => go("hasil"), 2000)
   }
 
   const handleSave = () => {
@@ -136,8 +138,11 @@ export default function Page() {
             }}
           />
         )
-      case "detail":
-        return <DetailScreen go={go} item={detail ?? history[0]} onDelete={handleDelete} />
+      case "detail": {
+        const item = detail ?? history[0] ?? null
+        if (!item) { go("riwayat"); return null }
+        return <DetailScreen go={go} item={item} onDelete={handleDelete} />
+      }
       case "profil":
         return <ProfilScreen go={go} />
       case "info":
@@ -154,6 +159,8 @@ export default function Page() {
         return <SettingsScreen go={go} />
       case "chat":
         return <ChatScreen go={go} />
+      case "kalkulasi":
+        return <KalkulasiScreen />
     }
   }
 
